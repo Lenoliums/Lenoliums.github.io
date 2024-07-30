@@ -1,0 +1,62 @@
+html{
+    scroll-behavior: smooth;}
+body{
+    font-family: "Raleway";
+    margin: 0;
+}
+#helloPage{
+    background-color: rgb(37,41,52);
+    height: 100vh;
+    color: #fff;
+    flex-direction: column;
+}
+.flex-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    font-size: 32pt;
+    line-height: 36pt;
+    text-align: center;
+}
+
+#name{
+    color: #e31b6d;
+}
+
+.button{
+    font-size: 16pt;
+    color: #fff;
+    margin: 20px;
+    padding: 15px 20px;
+    border: 2px solid white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(4,194,201);
+    border-color: rgb(4,194,201);
+}
+.button:hover .arrow{
+    transform: rotate(90deg);
+}
+.arrow{margin-left: 10px; transition: 0.5s;}
+nav{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgb(37,41,52);
+    height: 50px;
+    border-bottom: 3px solid rgb(4,194,201);
+}
+a{text-decoration: none;}
+nav a{
+    color: #fff;
+    text-transform: uppercase;
+    margin: 20px;
+    font-size: 16px;
+    line-height: 18pt;
+}
