@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="index.js"></script>
+    <script src="projectCards.js" defer></script>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +14,7 @@
 <body>
     <div>
         <section id="helloPage" class="flex-wrap">
-                <div class="text">Hello, I'm <span id="name">Borisova Elena</span>.<br>
+                <div class="text">Hello, I'm <span class="active">Borisova Elena</span>.<br>
                     I'm a front-end developer.
                 </div>
                 <a href="#about">
@@ -23,14 +25,49 @@
                 </a> 
         </section>
         <nav>
-            <a href="#helloPage">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#helloPage" id="navHelloPage">Home</a>
+            <a href="#about" id="navAbout">About</a>
+            <a href="#portfolio" id="navPortfolio">Portfolio</a>
+            <a href="#contact" id="navContact">Contact</a>
 
         </nav>
-        <section id="about"></section>
-        <section id="portfolio"></section>
+        <section id="about">
+            <h1 id="about-header">About</h1>
+            <div class="line"></div>
+            <div class="flex-wrap"></div>
+            <div class="flex-wrap" id="skills-info">
+                <div id="info">
+                    <svg width="280" height="250">
+                        <mask id="svgmask1">
+                          <polygon fill="#ffffff" points="70 0, 210 0, 280 125, 210 250, 70 250, 0 125"></polygon>
+                        </mask>
+                        <image id='me' xlink:href="img\myPhoto.jpg" mask="url(#svgmask1)"></image>
+                      </svg>
+                      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae efficitur nunc, a auctor est. Sed tortor ipsum, sollicitudin ac eros eu, volutpat tristique risus. Integer et est sed nisi efficitur scelerisque in fermentum metus. </div>
+                </div>
+                <div class="flex-wrap" id="skills">
+                    <div class="skill"><div class='skill-conteiner' style="width: 90%"><div class="skill-range" ><div class="skill-name">CSS</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 90%"><div class="skill-range"><div class="skill-name">HTML</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 90%"><div class="skill-range" ><div class="skill-name">JavaScript</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 90%"><div class="skill-range"><div class="skill-name">Python</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 65%"><div class="skill-range"><div class="skill-name">React</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 65%"><div class="skill-range"><div class="skill-name">Figma</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 65%"><div class="skill-range"><div class="skill-name">Docker</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 50%"><div class="skill-range"><div class="skill-name">SQL</div></div></div></div>
+                    <div class="skill"><div class='skill-conteiner' style="width: 50%"><div class="skill-range"><div class="skill-name">GitHub</div></div></div></div>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="portfolio">
+            <h1 id="portfolio-header">Projects</h1>
+            <div class="line"></div>
+            <div class="flex-wrap" id="portfolioConteiner">
+
+            </div>
+
+        </section>
         <section id="contact"></section>
         <div style="height: 200vh;"></div>
     </div>

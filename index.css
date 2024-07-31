@@ -14,15 +14,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .text{
     font-size: 32pt;
     line-height: 36pt;
     text-align: center;
-}
-
-#name{
-    color: #e31b6d;
 }
 
 .button{
@@ -46,12 +43,21 @@ body{
 nav{
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0;
     background-color: rgb(37,41,52);
     height: 50px;
     border-bottom: 3px solid rgb(4,194,201);
+    z-index: 1;
 }
+.fixed{
+    position: sticky;
+    top: 0;
+    animation-name: navAnimation;
+    animation-duration: 1s;
+}
+@keyframes navAnimation {
+    0% {transform: translateY(-100px);}
+  }
+
 a{text-decoration: none;}
 nav a{
     color: #fff;
@@ -59,4 +65,181 @@ nav a{
     margin: 20px;
     font-size: 16px;
     line-height: 18pt;
+}
+.active{
+    color: #e31b6d;
+}
+
+section{color:#616161; padding: 100px 10% 0; text-align: center;}
+
+h1{
+    font-size: 30pt;
+    color: #444649;
+    text-transform: uppercase;
+    line-height: 18pt;
+    font-weight: 700;
+    margin: 0;
+    opacity: 0;
+}
+.line{
+    width: 70px;
+    height: 4px;
+    background-color: #444649;
+    margin: 25px auto 100px auto;
+    opacity: 0;
+}
+#skills-info{
+    gap:20px
+}
+#me{
+    width:280px;
+}
+#info{
+    flex: 1 0 300px;
+    font-size: 12pt;
+    opacity: 0;
+}
+#skills{
+    flex-direction: column;
+    flex: 1 0 300px;
+    opacity: 0;
+}
+.skill{
+    width: 100%;
+    height: 28px;
+    background-color: #eee;
+    margin-bottom: 15px;
+}
+.skill-range{
+    position: relative;
+    top:0;
+    left:0;
+    background-color: #00a1a7;
+    height: 100%;
+    width: 0;
+}
+.skill-conteiner{
+    position: relative;
+    top:0;
+    left:0;
+    height: 100%;
+}
+
+.skill-name{
+    text-align: center;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #04c2c9;
+    color: #fff;
+    height: 100%;
+    line-height: 30px;
+    width: 110px;
+    font-weight: 600;
+}
+.slideinLeftAnimation{
+    animation-name: slideinLeftAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards ;
+}
+@keyframes slideinLeftAnimation {
+    0% {translate: -600px 0;}
+    100%{translate: 0; opacity: 1;}
+  }
+  .slideinRightAnimation{
+    animation-name: slideinRightAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards ;
+}
+@keyframes slideinRightAnimation {
+    0% {translate: 600px 0;}
+    100%{translate: 0; opacity: 1;}
+  }
+
+.skillsAnimation{
+    animation-name: skillsAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards ;
+}
+@keyframes skillsAnimation {
+    from {width: 0;}
+    to {width: 100%;}
+  }
+#portfolio{
+    background-color: #f5f5f5;
+}
+.projectConteiner{
+    position: relative;
+    width: 390px;
+    height: 300px;
+}
+.projectImg{
+    width: 100%;
+    height: 100%;
+}
+.projectConteiner:hover .projectImg{
+    animation-name: projectImgOutAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes projectImgOutAnimation {
+    100% {opacity: 0;}
+  }  
+.projectConteiner:hover h2, .projectConteiner:hover h3{
+    opacity: 1;
+    animation-name: slideinTopAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards ;
+}
+@keyframes slideinTopAnimation {
+    0% {translate:0 -50px;}
+    100%{translate: 0;}
+  }
+ 
+.projectConteiner:hover .projectButton{
+    opacity: 1;
+    animation-name: slideinDownAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}  
+@keyframes slideinDownAnimation {
+    0% {translate:0 50px;}
+    100%{translate: 0;}
+  }
+.center{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+h2{
+    color: #1b242f;
+    line-height: 18pt;
+    font-weight: 700;
+    margin: 5px auto;
+    opacity: 0;
+    
+}
+h3{
+    color: #e31b6d;
+    font-size: 12pt;
+    font-weight: 500;
+    margin: 0 auto;
+    opacity: 0;
+}
+.projectButton{
+    opacity: 0;
+    color: #1b242f;
+    padding: 7px 0;
+    width: 170px;
+    border: 2px solid #e31b6d;
+    cursor: pointer;
+    text-transform:uppercase;
+    margin-top: 80px;
+}
+
+.projectButton:hover{
+    color: #fff;
+    background-color: #e31b6d;
 }
