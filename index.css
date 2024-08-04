@@ -1,5 +1,6 @@
 html{
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Raleway";
     margin: 0;
@@ -70,7 +71,7 @@ nav a{
     color: #e31b6d;
 }
 
-section{color:#616161; padding: 100px 10% 0; text-align: center;}
+section{color:#616161; padding: 100px 6% 0; text-align: center;}
 
 h1{
     font-size: 30pt;
@@ -169,44 +170,84 @@ h1{
     background-color: #f5f5f5;
 }
 .projectConteiner{
+    overflow: hidden;
     position: relative;
-    width: 390px;
     height: 300px;
+    flex: 0 0 390px;
+    opacity: 0;
 }
 .projectImg{
     width: 100%;
     height: 100%;
 }
-.projectConteiner:hover .projectImg{
-    animation-name: projectImgOutAnimation;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-@keyframes projectImgOutAnimation {
-    100% {opacity: 0;}
-  }  
-.projectConteiner:hover h2, .projectConteiner:hover h3{
-    opacity: 1;
+ 
+.slideinTopAnimation{
     animation-name: slideinTopAnimation;
     animation-duration: 0.5s;
     animation-fill-mode: forwards ;
-}
+}  
 @keyframes slideinTopAnimation {
     0% {translate:0 -50px;}
     100%{translate: 0;}
   }
- 
-.projectConteiner:hover .projectButton{
-    opacity: 1;
-    animation-name: slideinDownAnimation;
+.slideinBottomAnimation{
+    animation-name: slideinBottomAnimation;
     animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}  
-@keyframes slideinDownAnimation {
+    animation-fill-mode: forwards ;
+}   
+@keyframes slideinBottomAnimation{
     0% {translate:0 50px;}
     100%{translate: 0;}
   }
+.slideoutTopAnimation{
+    animation-name: slideoutTopAnimation;
+    animation-duration: .5s;
+    animation-fill-mode: forwards ;
+}  
+@keyframes slideoutTopAnimation {
+    0% {translate:0;}
+    100%{translate: 0 -50px;}
+  }
+.slideoutBottomAnimation{
+    animation-name: slideoutBottomAnimation;
+    animation-duration: .5s;
+    animation-fill-mode: forwards ;
+}   
+@keyframes slideoutBottomAnimation{
+    0% {translate:0;}
+    100%{translate: 0 50px;}
+  }  
+
+.slideinBottomAnimation500{
+    opacity: 1;
+    animation-name: slideinBottomAnimation500;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards ;
+}   
+@keyframes slideinBottomAnimation500 {
+    0% {translate:0 500px;}
+    100%{translate: 0;}
+  }
+.opacityUp{
+    animation-name: opacityUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards ;
+}   
+@keyframes opacityUp {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+  }
+.opacityDown{
+    animation-name: opacityDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards ;
+}   
+@keyframes opacityDown {
+    0% {opacity: 1;}
+    100%{opacity: 0;}
+  }
 .center{
+    opacity: 0;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -218,7 +259,6 @@ h2{
     line-height: 18pt;
     font-weight: 700;
     margin: 5px auto;
-    opacity: 0;
     
 }
 h3{
@@ -226,17 +266,25 @@ h3{
     font-size: 12pt;
     font-weight: 500;
     margin: 0 auto;
-    opacity: 0;
 }
 .projectButton{
-    opacity: 0;
     color: #1b242f;
     padding: 7px 0;
     width: 170px;
+    height: 18px;
     border: 2px solid #e31b6d;
     cursor: pointer;
     text-transform:uppercase;
     margin-top: 80px;
+}
+.projectButton a{
+    color: #1b242f;
+    padding: 7px 0;
+    width: 170px;
+    height: 18px;
+} 
+.projectButton:hover a{
+    color: #fff;
 }
 
 .projectButton:hover{
