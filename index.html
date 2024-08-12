@@ -71,15 +71,23 @@
         <section id="contact"></section>
         <div style="height: 200vh;"></div>
     </div>
-    <div class="projectDiscriptionConteiner">
-        <div class="projectDiscriptionCard">
-            <div class="projectDiscriptionImgConteiner">
-                <img src="img\tic-tac-toe.jpg" alt="projectDiscriptionImg" class="projectDiscriptionImg">
+    <div class="projectDiscriptionConteiner" onclick="this.style.visibility='hidden'">
+        <div class="projectDiscriptionCard" onclick="event.stopPropagation()">
+            <div class="carusel">
+                
+            </div>
+            <div class="arrowsDescriptionConteiner">
+                <div class="arrowConteiner left"> <img class="arrowDescription" style="transform: rotate(180deg);" src="img\arrow_r.png" alt="arrow_left"></div>
+                <div class="arrowConteiner right"> <img class="arrowDescription" src="img\arrow_r.png" alt="arrow_right"></div>
             </div>
             <div class="infoConteiner">
-                <h4>ChowNow Discover</h4>
-                <h5 class="discriptionInfo">FOOD ORDERING PLATFORM.</h5>
-                <h5>ChowNow Discover is a platform that lets customers discover new local restaurants and provides business owners with tools to convert first time orders into lifelong diners.</h5>
+                <h4 class="discriptionName">ChowNow Discover</h4>
+                <h5 class="discriptionInfo" style="text-transform: uppercase;">FOOD ORDERING PLATFORM.</h5>
+                <h5 class="discriptionText">ChowNow Discover is a platform that lets customers discover new local restaurants and provides business owners with tools to convert first time orders into lifelong diners.</h5>
+            </div>
+            <div class="projectFooter">
+                <a class="projectButton discriptionButton" href='pau'>View site</a>
+                <img class="close" src="img\close.png" alt="cross" onclick="document.getElementsByClassName('projectDiscriptionConteiner')[0].style.visibility='hidden'">
             </div>
             
         </div>

@@ -268,6 +268,7 @@ h3{
     margin: 0 auto;
 }
 .projectButton{
+    display: block;
     color: #1b242f;
     padding: 7px 0;
     width: 170px;
@@ -276,23 +277,14 @@ h3{
     cursor: pointer;
     text-transform:uppercase;
     margin-top: 80px;
+    text-align: center;
 }
-.projectButton a{
-    color: #1b242f;
-    padding: 7px 0;
-    width: 170px;
-    height: 18px;
-} 
-.projectButton:hover a{
-    color: #fff;
-}
-
 .projectButton:hover{
     color: #fff;
     background-color: #e31b6d;
 }
 .projectDiscriptionConteiner{
-    /* visibility: hidden; */
+    visibility: hidden;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -303,21 +295,46 @@ h3{
     background-color: rgba(0, 0, 0, 0.3);
 }
 .projectDiscriptionCard{
+    overflow: hidden;
     height: 100vh;
     width: 700px;
-    opacity: 1 !important;
     background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-width: 700px) {
     .projectDiscriptionCard {
       width: 100%;
     }
   }
-.projectDiscriptionImgConteiner{
+.carusel{
+    position: relative;
     height: 60%;
+    width: 10000px;
+    display: flex;
+    translate: -700px;
 }
-.projectDiscriptionImg{
-    width: 100%;
+.caruselRightSlide{
+    animation-name: caruselRightSlide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards ;
+}   
+@keyframes caruselRightSlide {
+    0% {translate:-700px 0;}
+    100%{translate: -1400px 0;}
+  }
+.caruselLeftSlide{
+    animation-name: caruselLeftSlide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards ;
+}   
+@keyframes caruselLeftSlide {
+    0% {translate:-700px 0;}
+    100%{translate: 0;}
+  }  
+.slide{
+    object-fit: contain;
+    width: 700px;
     height: 100%;
 }
 .infoConteiner{
@@ -346,4 +363,42 @@ h5{
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-weight: 700;
     margin: 0;
+}
+.projectFooter{
+    width: 90%;
+    position: absolute;
+    bottom: 2px;
+    left: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.close{
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+}
+.discriptionButton{
+    margin: 0;
+}
+.arrowsDescriptionConteiner{
+    margin-top: -53px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.arrowConteiner{
+    background: rgba(0, 0, 0, 0.3);
+    width: 63px;
+    height: 53px;
+    display:flex;  
+    align-items:center;  
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+.arrowDescription{
+    width: 32px;
+    height: 40px;
 }
