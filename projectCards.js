@@ -11,7 +11,7 @@ const projects=[
     },
     {
         discriptionName: 'e-lern',
-        img: '',
+        img: 'img/e-lern.png',
         tools: 'JS / CSS',
         buttonText: 'View site',
         siteURL: "./e-lern-Task/index.html",
@@ -21,7 +21,7 @@ const projects=[
     },
     {
         discriptionName: 'Calculator',
-        img: '',
+        img: 'img/calculator.png',
         tools: 'React JS / CSS',
         buttonText: 'View site',
         siteURL: "./Calculator/",
@@ -36,7 +36,7 @@ const projects=[
         buttonText: 'Learn more',
         siteURL: "https://github.com/baddabudda/db-n-web",
         discriptionText: 'Exam me is a platform that allows students to prepare for exams together, make edits to the notes of classmates and study materials from previous years.',
-        discriptionImg: ['img/exam-me1.png', 'img/exam-me2.png', 'img/exam-me3.png'],
+        discriptionImg: ['img/exam-me2.png', 'img/exam-me1.png', 'img/exam-me3.png'],
         discriptionInfo: 'student collaboration platform.'
     }
 ]
@@ -56,12 +56,16 @@ function projectCardDiscription(id){
     projectConteiner.querySelectorAll('.discriptionButton')[0].href=siteURL;
 
     const carusel = projectConteiner.getElementsByClassName('carusel')[0];
+    const windowWidth = window.innerWidth;
+    if(windowWidth<700){
+        window.location.href = siteURL;
+        return
+    }
     carusel.style.width=700*discriptionImg.length + 'px' 
+    
     const slides=[]
-    console.log(typeof discriptionImg)
     discriptionImg.forEach(slide => {
         slides.push(`<img class="slide" src=${slide}>`)
-        // slides.push(`<div class="slide" style="background: url(${slide}) center center / cover;"></div>`)
     });
     carusel.innerHTML = slides 
 

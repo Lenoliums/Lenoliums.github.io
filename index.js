@@ -6,6 +6,7 @@ document.addEventListener('scroll', headerAboutAnimation)
 document.addEventListener('scroll', headerPortfolioAnimation)
 document.addEventListener('scroll', infoAnimation)
 document.addEventListener('scroll', projectCardsAnimation)
+document.addEventListener('scroll', aboutCardsAnimation)
 
 
 function navAnimation(){
@@ -142,6 +143,22 @@ function projectUnhooverCardAnimation(img, name, tools, button, center){
     button.classList.add('slideoutBottomAnimation')
     center.classList.add('opacityDown')
 
+}
+function aboutCardsAnimation(){
+    const aboutCards = [...document.getElementsByClassName('aboutHexagon')]
+    const aboutCardTexts = [...document.getElementsByClassName('aboutCardTexts')]
+    const firstAboutCards =aboutCards[0]
+    if(isVisible(firstAboutCards, 0)){
+        let time = 0
+        aboutCards.forEach((el, ind)=>{
+            setTimeout(()=>{
+                el.classList.add('flipInX');
+                setTimeout(()=>aboutCardTexts[ind].classList.add('opacityUp05'), 200)
+                
+            }, time)
+            time+=300;
+        })
+    }
 }
 
 function isVisible(el, pos=window.innerHeight/3) {

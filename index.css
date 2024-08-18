@@ -52,7 +52,7 @@ nav{
 .fixed{
     position: sticky;
     top: 0;
-    animation-name: navAnimation;
+    animation-timing-function: ease-out; animation-name:  navAnimation;
     animation-duration: 1s;
 }
 @keyframes navAnimation {
@@ -90,15 +90,19 @@ h1{
     opacity: 0;
 }
 #skills-info{
-    gap:20px
+    align-items:start;
+    margin-top:70px;
 }
 #me{
-    width:280px;
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
 }
 #info{
     flex: 1 0 300px;
     font-size: 12pt;
     opacity: 0;
+    padding: 0 50px;
 }
 #skills{
     flex-direction: column;
@@ -139,7 +143,7 @@ h1{
     font-weight: 600;
 }
 .slideinLeftAnimation{
-    animation-name: slideinLeftAnimation;
+    animation-timing-function: ease-out; animation-name:  slideinLeftAnimation;
     animation-duration: 1s;
     animation-fill-mode: forwards ;
 }
@@ -148,7 +152,7 @@ h1{
     100%{translate: 0; opacity: 1;}
   }
   .slideinRightAnimation{
-    animation-name: slideinRightAnimation;
+    animation-timing-function: ease-out; animation-name:  slideinRightAnimation;
     animation-duration: 1s;
     animation-fill-mode: forwards ;
 }
@@ -158,7 +162,7 @@ h1{
   }
 
 .skillsAnimation{
-    animation-name: skillsAnimation;
+    animation-timing-function: ease-out; animation-name:  skillsAnimation;
     animation-duration: 1s;
     animation-fill-mode: forwards ;
 }
@@ -182,7 +186,7 @@ h1{
 }
  
 .slideinTopAnimation{
-    animation-name: slideinTopAnimation;
+    animation-name:  slideinTopAnimation;
     animation-duration: 0.5s;
     animation-fill-mode: forwards ;
 }  
@@ -191,7 +195,7 @@ h1{
     100%{translate: 0;}
   }
 .slideinBottomAnimation{
-    animation-name: slideinBottomAnimation;
+    animation-timing-function: ease-out; animation-name:  slideinBottomAnimation;
     animation-duration: 0.5s;
     animation-fill-mode: forwards ;
 }   
@@ -200,7 +204,7 @@ h1{
     100%{translate: 0;}
   }
 .slideoutTopAnimation{
-    animation-name: slideoutTopAnimation;
+    animation-name:  slideoutTopAnimation;
     animation-duration: .5s;
     animation-fill-mode: forwards ;
 }  
@@ -209,7 +213,7 @@ h1{
     100%{translate: 0 -50px;}
   }
 .slideoutBottomAnimation{
-    animation-name: slideoutBottomAnimation;
+    animation-name:  slideoutBottomAnimation;
     animation-duration: .5s;
     animation-fill-mode: forwards ;
 }   
@@ -220,7 +224,8 @@ h1{
 
 .slideinBottomAnimation500{
     opacity: 1;
-    animation-name: slideinBottomAnimation500;
+    animation-timing-function: ease-out; 
+    animation-name:  slideinBottomAnimation500;
     animation-duration: 0.5s;
     animation-fill-mode: forwards ;
 }   
@@ -229,16 +234,21 @@ h1{
     100%{translate: 0;}
   }
 .opacityUp{
-    animation-name: opacityUp;
+    animation-name:  opacityUp;
     animation-duration: 1s;
     animation-fill-mode: forwards ;
-}   
+}  
+.opacityUp05{
+    animation-name:  opacityUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards ;
+}  
 @keyframes opacityUp {
     0% {opacity: 0;}
     100%{opacity: 1;}
   }
 .opacityDown{
-    animation-name: opacityDown;
+    animation-timing-function: ease-out; animation-name:  opacityDown;
     animation-duration: 1s;
     animation-fill-mode: forwards ;
 }   
@@ -264,7 +274,7 @@ h2{
 h3{
     color: #e31b6d;
     font-size: 12pt;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0 auto;
 }
 .projectButton{
@@ -276,7 +286,7 @@ h3{
     border: 2px solid #e31b6d;
     cursor: pointer;
     text-transform:uppercase;
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center;
 }
 .projectButton:hover{
@@ -315,7 +325,7 @@ h3{
     translate: -700px;
 }
 .caruselRightSlide{
-    animation-name: caruselRightSlide;
+    animation-name:  caruselRightSlide;
     animation-duration: 0.5s;
     animation-fill-mode: forwards ;
 }   
@@ -402,3 +412,62 @@ h5{
     width: 32px;
     height: 40px;
 }
+.aboutHexagon{
+    background-color: #04c2c9;
+    width: 120px;
+    height: 100px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin: auto;
+    opacity: 0;
+}
+.hexagon{
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)
+}
+.aboutImg{
+    width: 65px;
+    height: 65px;
+}
+h6{
+    margin: 15px 0 5px;   
+    color: #616161;
+    text-align: center;
+    font-size: 18pt;
+}
+.color616161{
+    color: #616161;
+}
+h3 a{
+    text-decoration: underline;
+}
+.aboutCard{
+    height: 250px;
+    flex-grow: 1;
+    width: 49%;
+}
+.aboutCardTexts{
+    opacity: 0;
+}
+@media screen and (min-width: 950px){
+    .aboutCard{
+        width: 24%;
+    }
+}
+@media screen and (max-width: 450px){
+    .aboutCard{
+        width: 100%;
+    }
+}
+.aboutConteiner{
+    gap: 10px;
+}
+.flipInX{
+    animation-timing-function: ease-out; animation-name:  flipInX;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes flipInX{
+    0% {opacity: 0; transform: rotateY(-90deg);}
+    100%{opacity: 1; transform: rotateY(0);}
+  }
