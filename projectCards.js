@@ -1,7 +1,7 @@
 const projects=[
     {
         discriptionName: 'TicTacToe',
-        img: 'img/tic-tac-toe.jpg',
+        img: 'img/tic_tac_toe.png',
         tools: 'JS / CSS',
         buttonText: 'View site',
         siteURL: "./TicTacToe/index.html",
@@ -32,7 +32,7 @@ const projects=[
     {
         discriptionName: 'Exam me',
         img: 'img/exam-me.png',
-        tools: 'Angular JS / TS / CSS',
+        tools: 'Angular / TS / CSS',
         buttonText: 'Learn more',
         siteURL: "https://github.com/baddabudda/db-n-web",
         discriptionText: 'Exam me is a platform that allows students to prepare for exams together, make edits to the notes of classmates and study materials from previous years.',
@@ -41,12 +41,22 @@ const projects=[
     },
     {
         discriptionName: 'Urban-Topology-Analysis-Service',
-        img: 'img/ingria_team.jpg',
-        tools: 'Angular JS / CSS',
+        img: 'img/ingria__team.jpg',
+        tools: 'Angular / CSS',
         buttonText: 'Learn more',
         siteURL: "https://github.com/INRGIA-team/Urban-Topology-Analysis-Service/tree/main?tab=readme-ov-file",
         discriptionText: '',
         discriptionImg: ['img/ingria_team1.mp4', 'img/ingria_team2.mp4'],
+        discriptionInfo: ''
+    },
+    {
+        discriptionName: 'More repositories',
+        img: 'img/github.png',
+        tools: 'JS / Python / C++',
+        buttonText: 'View site',
+        siteURL: "https://github.com/Lenoliums?tab=repositories",
+        discriptionText: '',
+        discriptionImg: [],
         discriptionInfo: ''
     }
 ]
