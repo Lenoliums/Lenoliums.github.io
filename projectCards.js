@@ -40,14 +40,14 @@ const projects=[
         discriptionInfo: 'student collaboration platform.'
     },
     {
-        discriptionName: 'Urban-Topology-Analysis-Service',
+        discriptionName: 'Urban-Topology project',
         img: 'img/ingria__team.jpg',
         tools: 'Angular / CSS',
         buttonText: 'Learn more',
         siteURL: "https://github.com/INRGIA-team/Urban-Topology-Analysis-Service/tree/main?tab=readme-ov-file",
-        discriptionText: '',
+        discriptionText: 'Urban-Topology Analysis platform is a website that analyzes topological information on maps. The project processes information about cities or selected areas and provides a number of metrics and graphs.',
         discriptionImg: ['img/ingria_team1.mp4', 'img/ingria_team2.mp4'],
-        discriptionInfo: ''
+        discriptionInfo: 'university practice project'
     },
     {
         discriptionName: 'More repositories',

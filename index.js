@@ -7,6 +7,7 @@ document.addEventListener('scroll', headerPortfolioAnimation)
 document.addEventListener('scroll', infoAnimation)
 document.addEventListener('scroll', projectCardsAnimation)
 document.addEventListener('scroll', aboutCardsAnimation)
+document.addEventListener('scroll', headerContactAnimation)
 
 
 function navAnimation(){
@@ -76,6 +77,18 @@ function skillsAnimation(){
 
 }
 
+function headerContactAnimation(){
+    const h=document.getElementById('contact-header')
+    const contacs = [...document.getElementsByClassName('posConteiner')]
+    if(isVisible(h, 0)){
+        h.classList.add('slideinLeftAnimation')
+        setTimeout(()=>{document.getElementsByClassName('line')[2].classList.add('slideinLeftAnimation')}, 300)
+        setTimeout(()=>{contacs.forEach(el => {
+            el.classList.add('posAppearance')
+        });}, 700)
+        
+    }
+}
 function headerAboutAnimation(){
     const h=document.getElementById('about-header')
     if(isVisible(h)){
@@ -170,3 +183,14 @@ function isVisible(el, pos=window.innerHeight/3) {
     var tb = tt + el.offsetHeight;
     return ((tb + pos<= wt + window.innerHeight) && (tt >= wt));
 }
+window.addEventListener("load", contactLoading);
+function contactLoading(){
+    const contacs = [...document.getElementsByClassName('contactConteiner')]
+    contacs.forEach((el)=>{
+        el.onmouseover=()=>{el.getElementsByTagName('span')[0].classList.add('slideinTopAnimation')}
+        el.onmouseout=()=>{el.getElementsByTagName('span')[0].classList.remove('slideinTopAnimation')}
+
+    })
+
+}
+            

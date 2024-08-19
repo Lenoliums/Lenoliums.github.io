@@ -171,6 +171,7 @@ h1{
   }
 #portfolio{
     background-color: #f5f5f5;
+    overflow: hidden;
 }
 .projectConteiner{
     overflow: hidden;
@@ -178,6 +179,9 @@ h1{
     height: 300px;
     flex: 0 0 390px;
     opacity: 0;
+}
+#portfolioConteiner{
+    margin-bottom: 100px;
 }
 .projectImg{
     width: 100%;
@@ -187,7 +191,7 @@ h1{
  
 .slideinTopAnimation{
     animation-name:  slideinTopAnimation;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards ;
 }  
 @keyframes slideinTopAnimation {
@@ -196,7 +200,7 @@ h1{
   }
 .slideinBottomAnimation{
     animation-timing-function: ease-out; animation-name:  slideinBottomAnimation;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-fill-mode: forwards ;
 }   
 @keyframes slideinBottomAnimation{
@@ -471,3 +475,111 @@ h3 a{
     0% {opacity: 0; transform: rotateY(-90deg);}
     100%{opacity: 1; transform: rotateY(0);}
   }
+#contact{
+    background: #252934;
+    height: 60vh;
+    overflow: hidden;
+}
+.downTriangle{
+    position: relative;
+    top: -100px;
+    left: -6vw;
+    width: 0; 
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 15vh solid #f5f5f5;
+}
+#contact .line{
+    background-color: white;
+    margin-bottom: 50px;
+}
+#contact-header{
+    color: white;
+}
+.contactConteiner{background: #262f38;
+    cursor: pointer;
+    font-size: 18pt;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactConteiner span{
+    color: #fff;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: 800;
+}
+.posConteiner{
+    height: 55px;
+    margin: 0 15px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    opacity: 0;
+}
+.posAppearance{
+    animation-timing-function: ease-in-out; 
+    animation-name:  posAppearance;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes posAppearance{
+    0% {opacity: 0; 
+        transform: scale(0.1, 0.1);}
+    80%{
+        opacity: 1; 
+        transform: scale(1.6, 1.6);
+    }
+    100%{opacity: 1; transform: scale(1, 1);}
+  }
+
+.contactsConteiner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactConteiner:hover{
+    background-color: rgb(4,194,201);
+    transform: scale(0.8, 0.8);
+    
+}
+footer{
+    height: 100px;
+    background-color: #1b242f;
+    padding-bottom: 50px;
+}
+.button-footer{
+    position: relative;
+    top: -25px;
+    width: 45px;
+    height: 50px;
+    margin:auto;
+    background-color: #e31b6d;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-footer img{
+    width: 40px;
+    height: 40px;
+}
+.footnote {
+    color: #8f9aa7;
+    font-size: 10pt;
+    margin: 35px auto;
+    opacity: 0.6;
+    text-transform: uppercase;
+    text-align: center;
+}
