@@ -10,6 +10,16 @@ const projects=[
         discriptionInfo: ''
     },
     {
+        discriptionName: 'test-layout',
+        img: 'img/layout.png',
+        tools: 'React JS / CSS',
+        buttonText: 'View site',
+        siteURL: "./test_layout_ITGLOBAL/",
+        discriptionText: '',
+        discriptionImg: [],
+        discriptionInfo: ''
+    },
+    {
         discriptionName: 'e-lern',
         img: 'img/e-lern.png',
         tools: 'JS / CSS',
